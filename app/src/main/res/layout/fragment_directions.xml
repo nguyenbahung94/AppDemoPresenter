@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#100c0c"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_linear"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <ImageButton
+                    android:id="@+id/btn_mlocation"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@null"
+                    android:src="@drawable/gpssignal" />
+                <TextView
+                    android:text=""
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/edtOrigin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/btn_mlocation"
+                    android:hint="Enter origin address"
+                    android:paddingEnd="50dp"
+                    android:paddingRight="15dp"
+                    android:backgroundTint="#ffffff"
+                    />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:text=""
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:backgroundTint="#ffffff"
+                android:id="@+id/edtDestination"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Enter destination address"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:textStyle="bold"
+                android:id="@+id/btnFind"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="5dp"
+                android:background="#33797e"
+                android:text="find"
+                android:textColor="#ffffff" />
+
+            <ImageButton
+                android:background="@null"
+                android:src="@drawable/sunset"
+                android:id="@+id/btngetwearther"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_distance" />
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="0 km" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_clock" />
+
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="0 min" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_linear" />
+</RelativeLayout>
