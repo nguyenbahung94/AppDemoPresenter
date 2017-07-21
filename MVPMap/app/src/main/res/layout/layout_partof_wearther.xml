@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp">
+        <Button
+            android:id="@+id/btn_getwearther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="get" />
+        <TextView
+            android:id="@+id/tv_location_getwearther"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/btn_getwearther"
+            android:gravity="center"
+            android:hint="Your location"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_getcurrentlocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="location" />
+
+        <Button
+            android:id="@+id/btn_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Picker" />
+    </LinearLayout>
+
+
+</LinearLayout>

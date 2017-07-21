@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageButton
+                android:id="@+id/btn_mlocation"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:src="@drawable/gpssignal" />
+
+            <TextView
+                android:id="@+id/edtOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/btn_mlocation"
+                android:backgroundTint="#ffffff"
+                android:gravity="center_vertical"
+                android:hint="Enter origin address"
+                android:paddingEnd="50dp"
+                android:paddingRight="15dp"
+                android:text=""
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/edtDestination"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center_vertical"
+            android:hint="Enter destination address"
+            android:text=""
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnFind"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="5dp"
+            android:background="#33797e"
+            android:text="find"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btngetwearther"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:src="@drawable/sunset" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_distance" />
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="0 km" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_clock" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="0 min" />
+    </LinearLayout>
+</LinearLayout>
